@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Bernal - Ingeniero en Informática</title>
+    <title>Franco Bernal - Ingeniero en Informática, Desarrollador Web y Software</title>
+
+    <!-- Metaetiquetas SEO -->
+    <meta name="description"
+        content="Franco Bernal, Ingeniero en Informática especializado en el desarrollo de soluciones web, software y aplicaciones móviles.">
+    <meta name="keywords"
+        content="Ingeniero en Informática, Desarrollador Web, Desarrollador de Software, Soluciones Empresariales, Santiago de Chile">
+    <meta name="author" content="Franco Bernal">
+
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery CDN -->
@@ -86,61 +94,86 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #1b2a41;">
         <a class="navbar-brand" href="#">Franco Bernal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Forzar visibilidad de íconos en móviles y pantallas grandes sin usar el menú hamburguesa -->
+        <div class="navbar-collapse" id="navbarIcons">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/franco-bernal" target="_blank">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" width="24"
-                            height="24" class="mr-2">
-                        <span>GitHub: franco-bernal</span>
+                        <i class="fab fa-github mr-2" style="color: white;"></i> <!-- Icono con color -->
+                        <span class="d-none d-lg-inline">GitHub: franco-bernal</span>
+                        <!-- Texto visible solo en pantallas grandes -->
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.linkedin.com/in/franco-bernal/" target="_blank">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn"
-                            width="24" height="24" class="mr-2">
-                        <span>LinkedIn: franco-bernal</span>
+                        <i class="fab fa-linkedin mr-2" style="color: #0077b5;"></i> <!-- Icono con color -->
+                        <span class="d-none d-lg-inline">LinkedIn: franco-bernal</span>
+                        <!-- Texto visible solo en pantallas grandes -->
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mailto:franco.bernalgutierrez@gmail.com">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/gmail.svg" alt="Correo" width="24"
-                            height="24" class="mr-2">
-                        <span>Email: franco.bernalgutierrez@gmail.com</span>
+                        <i class="fas fa-envelope mr-2" style="color: #ea4335;"></i> <!-- Icono con color -->
+                        <span class="d-none d-lg-inline">Email: franco.bernalgutierrez@gmail.com</span>
+                        <!-- Texto visible solo en pantallas grandes -->
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <!-- Estilos adicionales -->
+    <style>
+        /* Mostrar siempre los íconos alineados a la derecha en mobile sin el menú hamburguesa */
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                flex-direction: row;
+                /* Alinea los íconos en una fila */
+                justify-content: flex-end;
+                /* Alinea a la derecha */
+            }
+
+            .navbar-nav .nav-item {
+                margin-left: 10px;
+                /* Espaciado entre los íconos */
+            }
+
+            .navbar {
+                flex-wrap: nowrap !important;
+            }
+        }
+    </style>
+
+
+
 
     <!-- Jumbotron con fondo oscurecido -->
     <header class="jumbotron text-center"
-        style="background-image: url('https://picsum.photos/1600/500'); background-size: cover; background-position: center; position: relative; height: 500px; display: flex; align-items: center; justify-content: center;">
+        style="background-image: url('https://picsum.photos/1600/500'); background-size: cover; background-position: center; height: 500px; display: flex; align-items: center; justify-content: center; margin: 0; position: relative;">
         <!-- Fondo oscuro sobre la imagen -->
         <div
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
         </div>
 
         <!-- Contenido principal sobre la imagen -->
-        <div class="container" style="position: relative; z-index: 2;">
-            <h1 class="text-white">
-                <i class="fas fa-user-tie mr-2"></i>Franco Bernal
+        <div class="container d-flex flex-column align-items-center justify-content-center"
+            style="position: relative; z-index: 2; height: 100%;">
+            <h1 class="text-white m-0">
+                Franco Bernal
             </h1>
             <p class="lead text-white">
                 <i class="fas fa-laptop-code mr-2"></i>Ingeniero en Informática
             </p>
-            <a href="#services" class="btn btn-primary btn-lg">
-                <i class="fas fa-briefcase mr-2"></i>Descubre Mis Servicios
+            <a target="_blank" href="cv.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-briefcase mr-2"></i>Revisar CV online
             </a>
         </div>
     </header>
+
+
 
     <!-- Section 2: Desarrollo de Páginas Web -->
     <section id="web-development" class="section bg-light-blue">
@@ -148,10 +181,10 @@
             <h2 class="text-center mb-5">Desarrollo de Páginas Web</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card shadow-sm text-center"> <!-- Alineación central -->
+                    <div class="card shadow-sm text-center pt-4"> <!-- Alineación central -->
                         <img src="https://picsum.photos/600/600" alt="Web Development"
                             class="img-fluid rounded-circle mx-auto"
-                            style="width: 300px; height: 300px; object-fit: cover;">
+                            style="width: 200px; height: 200px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <i class="fas fa-globe mr-2"></i>Landings & E-commerce
@@ -165,10 +198,10 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card shadow-sm text-center"> <!-- Alineación central -->
+                    <div class="card shadow-sm text-center pt-4"> <!-- Alineación central -->
                         <img src="https://picsum.photos/600/600?random=2" alt="Web Management"
                             class="img-fluid rounded-circle mx-auto"
-                            style="width: 300px; height: 300px; object-fit: cover;">
+                            style="width: 200px; height: 200px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <i class="fas fa-cogs mr-2"></i>CMS & Sistemas Administrativos
