@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Bernal - Ingeniero en Informática</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .section {
+            padding: 60px 0;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .bg-light-blue {
+            background-color: #f7f9fc;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar a {
+            color: #ffffff !important;
+        }
+
+        .jumbotron {
+            background: url('https://picsum.photos/1600/500') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 500px;
+            margin-bottom: 0;
+        }
+
+        .jumbotron h1 {
+            margin-top: 150px;
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .jumbotron p {
+            font-size: 1.5rem;
+        }
+
+        .card {
+            border: none;
+            margin-bottom: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card img {
+            border-radius: 0.25rem;
+        }
+
+        /* Mobile-first design adjustments */
+        @media (max-width: 768px) {
+            .jumbotron h1 {
+                font-size: 2.5rem;
+            }
+
+            .jumbotron p {
+                font-size: 1.2rem;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Franco Bernal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/franco-bernal" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" width="24"
+                            height="24" class="mr-2">
+                        <span>GitHub: franco-bernal</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/franco-bernal/" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn"
+                            width="24" height="24" class="mr-2">
+                        <span>LinkedIn: franco-bernal</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:franco.bernalgutierrez@gmail.com">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/gmail.svg" alt="Correo" width="24"
+                            height="24" class="mr-2">
+                        <span>Email: franco.bernalgutierrez@gmail.com</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Jumbotron con fondo oscurecido -->
+    <header class="jumbotron text-center"
+        style="background-image: url('https://picsum.photos/1600/500'); background-size: cover; background-position: center; position: relative; height: 500px; display: flex; align-items: center; justify-content: center;">
+        <!-- Fondo oscuro sobre la imagen -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
+        </div>
+
+        <!-- Contenido principal sobre la imagen -->
+        <div class="container" style="position: relative; z-index: 2;">
+            <h1 class="text-white">
+                <i class="fas fa-user-tie mr-2"></i>Franco Bernal
+            </h1>
+            <p class="lead text-white">
+                <i class="fas fa-laptop-code mr-2"></i>Ingeniero en Informática
+            </p>
+            <a href="#services" class="btn btn-primary btn-lg">
+                <i class="fas fa-briefcase mr-2"></i>Descubre Mis Servicios
+            </a>
+        </div>
+    </header>
+
+    <!-- Section 2: Desarrollo de Páginas Web -->
+    <section id="web-development" class="section bg-light-blue">
+        <div class="container">
+            <h2 class="text-center mb-5">Desarrollo de Páginas Web</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card shadow-sm text-center"> <!-- Alineación central -->
+                        <img src="https://picsum.photos/600/600" alt="Web Development"
+                            class="img-fluid rounded-circle mx-auto"
+                            style="width: 300px; height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-globe mr-2"></i>Landings & E-commerce
+                            </h5>
+                            <p class="card-text">
+                                Me especializo en la creación de landings optimizadas, enfocadas en la conversión de
+                                usuarios a clientes. Además, desarrollo tiendas en PrestaShop completamente funcionales,
+                                con diseños que maximizan las ventas y mejoran la experiencia de usuario.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm text-center"> <!-- Alineación central -->
+                        <img src="https://picsum.photos/600/600?random=2" alt="Web Management"
+                            class="img-fluid rounded-circle mx-auto"
+                            style="width: 300px; height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-cogs mr-2"></i>CMS & Sistemas Administrativos
+                            </h5>
+                            <p class="card-text">
+                                Desarrollo sistemas de gestión de contenido (CMS) personalizados que se adaptan a las
+                                necesidades de cada cliente. Estos sistemas permiten una administración eficaz de los
+                                contenidos y productos, asegurando la escalabilidad y seguridad del proyecto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Inteligencia Artificial y Soluciones Empresariales -->
+    <section id="ai-solutions" class="section bg-white">
+        <div class="container">
+            <h2>Inteligencia Artificial y Soluciones Empresariales</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <img src="https://picsum.photos/600/300?random=3" alt="AI Solutions" class="img-fluid"
+                            style="max-height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Soluciones Basadas en IA</h5>
+                            <p class="card-text">
+                                Utilizo una combinación de las tecnologías más avanzadas para crear soluciones
+                                empresariales basadas en Inteligencia Artificial:
+                            </p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg"
+                                        alt="Python" width="24" height="24" class="mr-2">
+                                    <strong>Python:</strong> El lenguaje base para la implementación de soluciones de IA
+                                    y análisis de datos.
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/googlecloud.svg"
+                                        alt="Machine Learning" width="24" height="24" class="mr-2">
+                                    <strong>Machine Learning:</strong> Modelos entrenados para predecir y optimizar
+                                    procesos en empresas.
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/tensorflow.svg"
+                                        alt="Deep Learning" width="24" height="24" class="mr-2">
+                                    <strong>Deep Learning:</strong> Redes neuronales avanzadas que permiten analizar
+                                    grandes volúmenes de datos.
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/databricks.svg"
+                                        alt="Data Mining" width="24" height="24" class="mr-2">
+                                    <strong>Data Mining:</strong> Extracción y análisis de datos relevantes para generar
+                                    información valiosa.
+                                </li>
+                            </ul>
+                            <p class="card-text mt-3">
+                                Estas tecnologías me permiten automatizar procesos, optimizar recursos y tomar
+                                decisiones empresariales más informadas basadas en análisis avanzados de datos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 4: Ethical Hacking y Seguridad -->
+    <section id="ethical-hacking" class="section bg-light-blue">
+        <div class="container">
+            <h2>Ethical Hacking y Seguridad</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <img src="https://picsum.photos/600/300?random=4" alt="Ethical Hacking" class="img-fluid"
+                            style="max-height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Protección y Seguridad</h5>
+                            <p class="card-text">Ofrezco una gama completa de servicios de Ethical Hacking para
+                                garantizar la seguridad de tus sistemas, incluyendo:</p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fas fa-shield-alt mr-2"></i>
+                                    <strong>Identificación de Vulnerabilidades:</strong> Evaluaciones profundas para
+                                    encontrar brechas en tus sistemas.
+                                </li>
+                                <li>
+                                    <i class="fas fa-bug mr-2"></i>
+                                    <strong>Pruebas de Penetración:</strong> Simulación de ataques controlados para
+                                    mejorar la seguridad.
+                                </li>
+                                <li>
+                                    <i class="fas fa-network-wired mr-2"></i>
+                                    <strong>Mejora de Infraestructura:</strong> Implementación de las mejores prácticas
+                                    para asegurar tu red y sistemas.
+                                </li>
+                                <li>
+                                    <i class="fas fa-lock mr-2"></i>
+                                    <strong>Protección de Datos:</strong> Asegurar la información crítica y los activos
+                                    digitales contra accesos no autorizados.
+                                </li>
+                            </ul>
+                            <p class="card-text mt-3">
+                                Con mis auditorías de seguridad, garantizo la protección de la información sensible y
+                                aseguro que tus sistemas estén preparados para resistir ataques.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace para FontAwesome -->
+
+    <!-- Section 5: Servicios para Microempresas y Empresas -->
+    <section id="services" class="section bg-white">
+        <div class="container">
+            <h2>Servicios para Microempresas y Empresas</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <img src="https://picsum.photos/600/300?random=5" alt="Business Services" class="img-fluid"
+                            style="max-height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Soluciones Tecnológicas para Empresas</h5>
+                            <p class="card-text">Ofrezco una gama de servicios tecnológicos diseñados para ayudar a las
+                                microempresas y grandes empresas a crecer, entre los que se incluyen:</p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fas fa-globe mr-2"></i>
+                                    <strong>Desarrollo de Aplicaciones Web y Móviles:</strong> Soluciones personalizadas
+                                    para optimizar procesos empresariales y mejorar la interacción con clientes.
+                                </li>
+                                <li>
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    <strong>Optimización de Ecommerce:</strong> Mejora continua del rendimiento y la
+                                    conversión en tiendas online.
+                                </li>
+                                <li>
+                                    <i class="fas fa-cloud mr-2"></i>
+                                    <strong>Soluciones en la Nube:</strong> Implementación de soluciones cloud que
+                                    permiten escalar operaciones de manera eficiente.
+                                </li>
+                                <li>
+                                    <i class="fas fa-database mr-2"></i>
+                                    <strong>Gestión de Bases de Datos:</strong> Diseño, implementación y mantenimiento
+                                    de bases de datos de alto rendimiento.
+                                </li>
+                            </ul>
+                            <p class="card-text mt-3">
+                                Estas soluciones están diseñadas para satisfacer las necesidades de empresas de
+                                cualquier tamaño, ayudándoles a mejorar la eficiencia y la escalabilidad de sus
+                                operaciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace para FontAwesome desde CDN confiable -->
+
+    <!-- Section 6: Educación -->
+    <section id="education" class="section bg-light-blue">
+        <div class="container">
+            <h2>Educación</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingeniería en Informática - DUOC UC</h5>
+                            <p class="card-text">
+                                Estudié <strong>Ingeniería en Informática</strong> en DUOC UC, donde adquirí los
+                                conocimientos necesarios para diseñar, desarrollar y gestionar soluciones tecnológicas
+                                de alto nivel. Mi formación se centró en aplicar teorías avanzadas en el desarrollo de
+                                software y la gestión de proyectos tecnológicos.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fas fa-laptop-code mr-2"></i>
+                                    <strong>Desarrollo de Software:</strong> Formación en diseño y desarrollo de
+                                    aplicaciones tecnológicas.
+                                </li>
+                                <li>
+                                    <i class="fas fa-project-diagram mr-2"></i>
+                                    <strong>Gestión de Proyectos:</strong> Implementación de teorías avanzadas en la
+                                    gestión de proyectos informáticos.
+                                </li>
+                                <li>
+                                    <i class="fas fa-database mr-2"></i>
+                                    <strong>Ingeniería de Datos:</strong> Amplia experiencia en bases de datos,
+                                    infraestructura y análisis de datos.
+                                </li>
+                            </ul>
+                            <a href="https://experienciavivo.duoc.cl/880596d0-6461-4b41-ad88-4ceabc6d2c81"
+                                class="btn btn-primary mt-3">
+                                Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace para FontAwesome desde CDN confiable -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-4">
+        <div class="container">
+            <p>Contacto: <a href="mailto:franco.bernalgutierrez@gmail.com"
+                    class="text-white">franco.bernalgutierrez@gmail.com</a></p>
+            <div class="social-icons d-flex justify-content-center">
+                <a href="https://github.com/franco-bernal" target="_blank" class="text-white mx-3">
+                    <i class="fab fa-github" style="font-size: 24px;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/franco-bernal/" target="_blank" class="text-white mx-3">
+                    <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+                </a>
+                <a href="mailto:franco.bernalgutierrez@gmail.com" class="text-white mx-3">
+                    <i class="fas fa-envelope" style="font-size: 24px;"></i>
+                </a>
+            </div>
+            <p class="mt-3">&copy; 2024 Franco Bernal. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
