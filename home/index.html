@@ -19,6 +19,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         .section {
             padding: 60px 0;
@@ -87,7 +90,29 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Estilos adicionales -->
+    <style>
+        /* Mostrar siempre los íconos alineados a la derecha en mobile sin el menú hamburguesa */
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                flex-direction: row;
+                /* Alinea los íconos en una fila */
+                justify-content: flex-end;
+                /* Alinea a la derecha */
+            }
+
+            .navbar-nav .nav-item {
+                margin-left: 10px;
+                /* Espaciado entre los íconos */
+            }
+
+            .navbar {
+                flex-wrap: nowrap !important;
+            }
+        }
+    </style>
+
+
 
 </head>
 
@@ -124,29 +149,6 @@
             </ul>
         </div>
     </nav>
-
-    <!-- Estilos adicionales -->
-    <style>
-        /* Mostrar siempre los íconos alineados a la derecha en mobile sin el menú hamburguesa */
-        @media (max-width: 991.98px) {
-            .navbar-nav {
-                flex-direction: row;
-                /* Alinea los íconos en una fila */
-                justify-content: flex-end;
-                /* Alinea a la derecha */
-            }
-
-            .navbar-nav .nav-item {
-                margin-left: 10px;
-                /* Espaciado entre los íconos */
-            }
-
-            .navbar {
-                flex-wrap: nowrap !important;
-            }
-        }
-    </style>
-
 
 
 
@@ -412,7 +414,6 @@
     </section>
 
     <!-- Enlace para FontAwesome desde CDN confiable -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
     <!-- Footer -->
