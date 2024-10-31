@@ -101,6 +101,16 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHP5PWD8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
+    <script>
+        Sentry.onLoad(function () {
+            Sentry.init({
+                // You can add any additional configuration here
+            });
+        });
+
+        myUndefinedFunction();
+    </script>
+
     <!-- End Google Tag Manager (noscript) -->
     <header class="text-center">
         <div class="container">
