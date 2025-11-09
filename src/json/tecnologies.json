@@ -1,0 +1,83 @@
+{
+  "technologies": [
+    {
+      "id": 1,
+      "nombre": "HTML",
+      "description": "Lenguaje de marcado estándar para crear la estructura y el contenido de páginas web. Define los elementos y su jerarquía en el documento.",
+      "icono": "fab fa-html5"
+    },
+    {
+      "id": 2,
+      "nombre": "CSS",
+      "description": "Lenguaje de estilos que controla la presentación visual de las páginas web. Define colores, tipografías, layouts y animaciones.",
+      "icono": "fab fa-css3-alt"
+    },
+    {
+      "id": 3,
+      "nombre": "JavaScript",
+      "description": "Lenguaje de programación que añade interactividad a las páginas web. Permite crear funcionalidades dinámicas y responder a eventos del usuario.",
+      "icono": "fab fa-js"
+    },
+    {
+      "id": 4,
+      "nombre": "ReactJS",
+      "description": "Biblioteca de JavaScript para construir interfaces de usuario. Permite crear componentes reutilizables y aplicaciones de una sola página (SPA) eficientes.",
+      "icono": "fab fa-react"
+    },
+    {
+      "id": 5,
+      "nombre": "Angular",
+      "description": "Framework de JavaScript para desarrollar aplicaciones web complejas. Proporciona una estructura completa para aplicaciones empresariales escalables.",
+      "icono": "fab fa-angular"
+    },
+    {
+      "id": 6,
+      "nombre": "VueJS",
+      "description": "Framework progresivo de JavaScript para construir interfaces de usuario. Combina simplicidad con potencia para aplicaciones modernas.",
+      "icono": "fab fa-vuejs"
+    },
+    {
+      "id": 7,
+      "nombre": "NextJS",
+      "description": "Framework de React para producción. Ofrece renderizado del lado del servidor, generación de sitios estáticos y optimizaciones automáticas.",
+      "icono": "fab fa-react"
+    },
+    {
+      "id": 8,
+      "nombre": "Python",
+      "description": "Lenguaje de programación versátil usado para desarrollo backend, análisis de datos, automatización y aplicaciones web con frameworks como Django y Flask.",
+      "icono": "fab fa-python"
+    },
+    {
+      "id": 9,
+      "nombre": "PHP",
+      "description": "Lenguaje de programación del lado del servidor especialmente diseñado para desarrollo web. Ampliamente usado en sitios dinámicos y sistemas de gestión de contenido.",
+      "icono": "fab fa-php"
+    },
+    {
+      "id": 10,
+      "nombre": "PRESTASHOP",
+      "description": "Plataforma de e-commerce open source para crear tiendas online. Ofrece gestión completa de productos, pedidos, clientes y pagos.",
+      "icono": "fas fa-shopping-cart"
+    },
+    {
+      "id": 11,
+      "nombre": "WORDPRESS",
+      "description": "Sistema de gestión de contenido (CMS) más popular del mundo. Permite crear y administrar sitios web, blogs y tiendas online de forma sencilla.",
+      "icono": "fab fa-wordpress"
+    },
+    {
+      "id": 12,
+      "nombre": "tiendas a medida",
+      "description": "Soluciones de e-commerce completamente personalizadas desarrolladas desde cero. Adaptadas a las necesidades específicas de cada negocio con funcionalidades únicas.",
+      "icono": "fas fa-store"
+    }
+  ],
+  "relations": {
+    "LANDING": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "E-COMMERCE": [10, 11, 12],
+    "CMS": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "DESARROLLOS A MEDIDA": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  }
+}
+
