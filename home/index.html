@@ -305,22 +305,6 @@
             padding: 20px 0;
             scrollbar-width: thin;
             scrollbar-color: #FFD700 transparent;
-            cursor: grab;
-            user-select: none;
-            -webkit-user-select: none;
-            scroll-behavior: smooth;
-        }
-
-        .epic-slider:active {
-            cursor: grabbing;
-        }
-
-        .epic-slider.dragging {
-            cursor: grabbing;
-        }
-
-        .epic-slider.dragging a {
-            pointer-events: none;
         }
 
         .epic-slider::-webkit-scrollbar {
@@ -339,16 +323,12 @@
 
         .epic-card {
             min-width: 280px;
-            cursor: grab;
+            cursor: pointer;
             transition: all 0.3s ease;
             margin: 4px;
             display: block;
             text-decoration: none !important;
             color: inherit;
-        }
-
-        .epic-slider.dragging .epic-card {
-            cursor: grabbing;
         }
 
         .epic-card:hover {
@@ -969,6 +949,70 @@
                 padding: 0.4rem;
                 padding-inline-start: 1rem;
                 padding-inline-end: 1rem;
+            }
+        }
+
+        /* Botón para volver arriba */
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #F7FF19;
+            border: 2px solid #000000;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            color: #000000;
+            font-weight: 900;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .scroll-to-top-btn .material-icons {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .scroll-to-top-btn::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px solid white;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .scroll-to-top-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .scroll-to-top-btn:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .scroll-to-top-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .scroll-to-top-btn .material-icons {
+                font-size: 1.5rem;
             }
         }
 
@@ -1719,7 +1763,7 @@
     <section class="epic-slider-section" style="padding: 60px 0; background: transparent;">
         <div class="container">
             <h2 class="text-white mb-4" style="font-family: 'BurbankBigCondensed', Arial, sans-serif; font-size: 2.5rem; font-style: italic;">Descubre</h2>
-            <div class="epic-slider" id="epicSlider">
+            <div class="epic-slider">
                 <a href="#web-development" class="epic-card text-decoration-none" style="text-decoration: none !important;">
                     <div class="epic-card-image">
                         <img src="https://picsum.photos/300/200?random=1" alt="Desarrollo Web">
@@ -2200,86 +2244,11 @@
             setTimeout(updateServiciosSliderButtons, 300);
         }
 
-        // Funcionalidad de arrastre para el slider "Descubre"
-        function initEpicSliderDrag() {
-            const slider = document.getElementById('epicSlider');
-            if (!slider) return;
-
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-            let hasMoved = false;
-
-            slider.addEventListener('mousedown', (e) => {
-                isDown = true;
-                hasMoved = false;
-                startX = e.pageX - slider.offsetLeft;
-                scrollLeft = slider.scrollLeft;
-            });
-
-            slider.addEventListener('mouseleave', () => {
-                isDown = false;
-                slider.classList.remove('dragging');
-            });
-
-            slider.addEventListener('mouseup', () => {
-                isDown = false;
-                slider.classList.remove('dragging');
-            });
-
-            slider.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                hasMoved = true;
-                slider.classList.add('dragging');
-                const x = e.pageX - slider.offsetLeft;
-                const walk = (x - startX) * 2; // Velocidad de arrastre
-                slider.scrollLeft = scrollLeft - walk;
-            });
-
-            // Prevenir el click en los enlaces cuando se arrastra
-            slider.addEventListener('click', (e) => {
-                if (hasMoved) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    hasMoved = false;
-                }
-            }, true);
-
-            // Soporte para touch en dispositivos móviles
-            let touchStartX = 0;
-            let touchScrollLeft = 0;
-            let touchHasMoved = false;
-
-            slider.addEventListener('touchstart', (e) => {
-                touchStartX = e.touches[0].pageX - slider.offsetLeft;
-                touchScrollLeft = slider.scrollLeft;
-                touchHasMoved = false;
-            });
-
-            slider.addEventListener('touchmove', (e) => {
-                if (!touchStartX) return;
-                touchHasMoved = true;
-                const x = e.touches[0].pageX - slider.offsetLeft;
-                const walk = (x - touchStartX) * 2;
-                slider.scrollLeft = touchScrollLeft - walk;
-            });
-
-            slider.addEventListener('touchend', (e) => {
-                if (touchHasMoved) {
-                    e.preventDefault();
-                }
-                touchStartX = 0;
-                touchHasMoved = false;
-            });
-        }
-
         // Actualizar botones al cargar la página
         document.addEventListener('DOMContentLoaded', function() {
             updateSliderButtons();
             updateBackendSliderButtons();
             updateServiciosSliderButtons();
-            initEpicSliderDrag();
             
             // Actualizar botones cuando se hace scroll manualmente
             const webSlider = document.getElementById('webSlider');
@@ -2304,6 +2273,31 @@
                 setTimeout(updateServiciosSliderButtons, 100);
             });
         });
+    </script>
+
+    <!-- Botón para volver arriba -->
+    <button id="scrollToTop" class="scroll-to-top-btn" onclick="scrollToTop()">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <script>
+        // Mostrar/ocultar botón de scroll to top
+        window.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'flex';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Función para hacer scroll hacia arriba
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 
